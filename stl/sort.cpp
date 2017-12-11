@@ -5,6 +5,10 @@ using namespace std;
 bool cmp(int a,int b){
 	return a>b;
 }
+struct greater{
+	template<class T>
+	bool operator()(T const &a, T const &b) const {return a>b; }
+};
 int main(){
 	int n=20;
 	int arr[n];
